@@ -8,6 +8,7 @@ namespace SolidPrinciples.A_SingleResponsibility
 {
     /// <summary>
     /// Single Responsibility For Class . One Reasone to modifiy class
+    /// اجعل للكلاس مهمة واحدة وليست متعددة حتي يسهل صيانتها واختبارها فيما بعد
     /// </summary>
     public class SingleResponsibility
     {
@@ -30,7 +31,6 @@ namespace SolidPrinciples.A_SingleResponsibility
             }
         }
 
-
         public class Report
         {
             public void PrintInvoice(Invoice invoice)
@@ -39,6 +39,51 @@ namespace SolidPrinciples.A_SingleResponsibility
             }
         }
 
+
+
+
+        public class User
+        {
+            public string Name { get; set; }
+            public string Password { get; set; }
+            public string Address { get; set; }
+        }
+
+        public class Email
+        {
+            public void SendEmail(string email, string content)
+            {
+
+            }
+        }
+
+        public class Logger
+        {
+            public void LogMessage(string message)
+            {
+
+            }
+        }
+
+        public class UserLogin
+        {
+            public void Login(string userName, string password)
+            {
+
+            }
+        }
+
+        public class UserRegisteration
+        {
+            public void Register(string userName,string password)
+            {
+
+            }
+        }
+
+
+
+    }
 
     }
 

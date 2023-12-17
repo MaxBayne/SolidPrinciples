@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SolidPrinciples.B_OpenExtenstionCloseModified
 {
     /// <summary>
-    /// Make Class Open For Extension and Close For Modified
+    /// Make Class Open For Extension and Close For Modified , by using inheritance and abstraction and make modification for subClasses not super classes
     /// </summary>
     public class OpenForExtendCloseForModified
     {

@@ -11,44 +11,85 @@ namespace SolidPrinciples.D_InterfaceSegregation
     /// </summary>
     public class InterfaceSegregation
     {
-
-        public interface ICashOrder
+        public InterfaceSegregation()
         {
-            void ProcessOrder();
+            
         }
 
-        public interface ICreditOrder
+        public interface ICanPrintSingle
         {
-            void ProcessOrder();
+            void PrintSingle(string content);
         }
 
-        public interface IOnlineOrder
+        public interface ICanFax
         {
-            void ProcessOrder();
+            void Fax(string content);
         }
 
-        public class CashOrder : ICashOrder
+        public interface ICanCopy
         {
-            public void ProcessOrder()
+            void Copy(string content);
+        }
+
+        public interface ICanPrintDuplex
+        {
+            void PrintDuplex(string content);
+        }
+
+
+        public class HpPrinter : ICanPrintSingle, ICanFax, ICanCopy
+        {
+            public void Copy(string content)
             {
-                throw new NotImplementedException();
+                Console.WriteLine($"Copy = {content}");
+            }
+
+            public void Fax(string content)
+            {
+                Console.WriteLine($"Fax = {content}");
+            }
+
+            public void PrintSingle(string content)
+            {
+                Console.WriteLine($"PrintSingle = {content}");
             }
         }
 
-        public class CreditOrder : ICreditOrder
+        public class CannonPrinter : ICanPrintSingle, ICanFax, ICanCopy,ICanPrintDuplex
         {
-            public void ProcessOrder()
+            public void Copy(string content)
             {
-                throw new NotImplementedException();
+                Console.WriteLine($"Copy = {content}");
+            }
+
+            public void Fax(string content)
+            {
+                Console.WriteLine($"Fax = {content}");
+            }
+
+            public void PrintDuplex(string content)
+            {
+                Console.WriteLine($"PrintDuplex = {content}");
+            }
+
+            public void PrintSingle(string content)
+            {
+                Console.WriteLine($"PrintSingle = {content}");
             }
         }
 
-        public class OnlineOrder : IOnlineOrder
+        public class SUVJetPrinter:ICanPrintSingle,ICanCopy
         {
-            public void ProcessOrder()
+            public void Copy(string content)
             {
-                throw new NotImplementedException();
+                Console.WriteLine($"Copy = {content}");
+            }
+
+            public void PrintSingle(string content)
+            {
+                Console.WriteLine($"PrintSingle = {content}");
             }
         }
+
     }
 }
