@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SolidPrinciples.E_DependencyInversion
 {
     /// <summary>
-    /// High Level Modules should not depend on low leve Modules both should depend upon abstractions
+    /// High Level Modules should not depend on low leve Modules both should depend on abstractions (using interfaces)
     /// </summary>
     public class DependencyInversion
     {
