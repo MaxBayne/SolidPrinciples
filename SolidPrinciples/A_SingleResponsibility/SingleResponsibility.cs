@@ -9,6 +9,7 @@ namespace SolidPrinciples.A_SingleResponsibility
     /// <summary>
     /// Single Responsibility For Class . One Reasone to modifiy class
     /// اجعل للكلاس مهمة واحدة وليست متعددة حتي يسهل صيانتها واختبارها فيما بعد
+    /// اجعل محتوي الكلاس من اجراءات تعكس اسمها والهدف منها ولا تجعل للكلاس الواحد مهام متعددة او تخدم اكثر من مجال
     /// </summary>
     public class SingleResponsibility
     {
